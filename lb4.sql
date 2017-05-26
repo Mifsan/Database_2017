@@ -1,0 +1,12 @@
+INSERT INTO book VALUES(NULL, 'Война и мир', 'Роман', 'Л.Н. Толстой', '1');
+INSERT INTO book(id_book, book_name, book_genre, book_author, id_pub_house) VALUES(NULL, 'Капитанская дочка', 'Роман', 'А.С Пушкин', '1');
+INSERT INTO `order` SELECT NULL, '2017-04-03 00:46:00', '1', id_buyer FROM buyer WHERE buyer_name = 'Иван Иванов';
+DELETE FROM publishing_house;
+DELETE FROM `order` WHERE order_date < '2000-11-12 00:00:00';
+TRUNCATE TABLE shop;
+UPDATE book SET book_genre = 'Комедия';
+UPDATE book SET book_genre = 'Романтика' WHERE id_book = '2';
+UPDATE book SET book_genre = 'Детектив', book_author = 'И.И Непутин' WHERE id_book = '1';
+SELECT book_name, book_genre FROM book;
+SELECT * FROM book;
+SELECT * FROM book WHERE id_book = '1';
